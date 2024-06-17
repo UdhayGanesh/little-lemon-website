@@ -11,19 +11,22 @@ const highlights = [
     imgAlt: "Week's special Image 1",
     dishName: "Greek salad",
     dishPrice: "10.99",
+    dishDes: "Refreshing Mediterranean dish featuring tomatoes, cucumbers, onions, feta cheese, and a dressing of olive oil and herbs."
   },
   {
     imgSrc: wsp2,
     imgAlt: "Week's special Image 2",
-    dishName: "Bruchetta",
+    dishName: "Bruschetta",
     dishPrice: "5.99",
+    dishDes: " Italian appetizer consisting of toasted bread topped with tomatoes, garlic, basil, and olive oil."
   },
   {
     imgSrc: wsp3,
     imgAlt: "Week's special Image 3",
-    dishName: "Lemon Dessert",
+    dishName: "Lemon cake",
     dishPrice: "5.00",
-  },
+    dishDes: "Tangy dessert made with a creamy cheesecake filling infused with zesty lemon flavor, served on a buttery graham cracker crust."
+  }
 ];
 
 export default function Highlights() {
@@ -42,7 +45,7 @@ export default function Highlights() {
                   <p>{highlight.dishName}</p>
                   <span>$ {highlight.dishPrice}</span>
                 </div>
-                <p>Lorem ipsum dolor sit amet, illum vituperata id mea, eius phaedrum eu duo. Te maiorum gloriatur sea.</p>
+                <p>{highlight.dishDes}</p>
                 <div className='order'>
                   <a href='#'>Order</a>
                 </div>
