@@ -23,7 +23,7 @@ export default function BookingForm({ state, dispatch }) {
       resDate: Yup.string().required("please select a date"),
       resTime: Yup.string().required("please select a time"),
       guests: Yup.number().min(1, "please select a number between 1 and 10")
-        .max(10, "please select a number between 1 and 10").required("please select the number of guests"),
+        .max(10, "please select a number between 1 and 10").required("please select the number of diners"),
       occasion: Yup.string().required("please select an occasion"),
     }),
   });
@@ -44,7 +44,7 @@ export default function BookingForm({ state, dispatch }) {
             {state && state.map(time => (<option key={time}>{time}</option>))}
         </select>
         {(formik.errors.resTime && formik.touched.resTime) && <span className='errorMs'>{formik.errors.resTime}</span>}
-        <label htmlFor="guests">Number of guests</label>
+        <label htmlFor="guests">Number of Diners</label>
         <input type="number" placeholder="1" min="1" max="10" id="guests" {...formik.getFieldProps("guests")}/>
         {(formik.errors.guests && formik.touched.guests) && <span className='errorMs'>{formik.errors.guests}</span>}
         <label htmlFor="occasion">Occasion</label>
